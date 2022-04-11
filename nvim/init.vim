@@ -10,7 +10,6 @@ Plug 'andys8/vim-elm-syntax', { 'for': ['elm'] }
 Plug 'jparise/vim-graphql'
 " Language server client
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-"Plug 'w0rp/ale'
 Plug 'morhetz/gruvbox'
 Plug 'gabesoft/vim-ags'
 Plug 'michaeljsmith/vim-indent-object'
@@ -32,7 +31,8 @@ Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'sbdchd/neoformat'
+" If you want to have icons in your statusline choose one of these
+Plug 'kyazdani42/nvim-web-devicons'
 
 call plug#end()
 
@@ -186,10 +186,10 @@ set hidden
 set nobackup
 set nowritebackup
 
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat brittany
-augroup END
+"augroup fmt
+  "autocmd!
+  "autocmd BufWritePre * undojoin | Neoformat brittany
+"augroup END
 
 autocmd Filetype haskell setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
